@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { SYLLABUS } from '../data/syllabus';
-import { ChevronDown, ChevronRight, Menu, X, BookOpen } from 'lucide-react';
+import { ChevronDown, ChevronRight, X, BookOpen } from 'lucide-react';
 
 const Sidebar: React.FC<{ mobileOpen: boolean; setMobileOpen: (open: boolean) => void }> = ({ mobileOpen, setMobileOpen }) => {
   const [expandedForm, setExpandedForm] = useState<number | null>(4);
-  const location = useLocation();
 
   const toggleForm = (id: number) => {
     setExpandedForm(expandedForm === id ? null : id);
